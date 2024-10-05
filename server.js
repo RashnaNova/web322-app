@@ -1,5 +1,5 @@
 const express = require('express');
-const storeService = require('./store-service.js'); // Ensure this path is correct
+const storeService = require('./store-service.js'); 
 const app = express();
 const PORT = 8080;
 
@@ -10,10 +10,10 @@ storeService.initialize()
         app.get('/shop', (req, res) => {
             storeService.getPublishedItems()
                 .then((data) => {
-                    res.json(data); // Return the data as JSON
+                    res.json(data); 
                 })
                 .catch((err) => {
-                    res.status(500).json({ message: err }); // Return error message
+                    res.status(500).json({ message: err }); 
                 });
         });
 
