@@ -5,10 +5,10 @@ let categories = []; // Array to hold categories
 // Function to initialize the data from JSON files
 async function initialize() {
     try {
-        const itemsData = await fs.readFile('./items.json', 'utf8'); // Adjust the path as necessary
+        const itemsData = await fs.readFile('./items.json', 'utf8'); 
         items = JSON.parse(itemsData);
         
-        const categoriesData = await fs.readFile('./categories.json', 'utf8'); // Adjust the path as necessary
+        const categoriesData = await fs.readFile('./categories.json', 'utf8');
         categories = JSON.parse(categoriesData);
         console.log("Data initialized successfully.");
 
